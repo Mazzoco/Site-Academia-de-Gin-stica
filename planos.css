@@ -1,0 +1,68 @@
+.card {
+    padding: 20px;
+    width: 320px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.planos-da-academia {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.preço {
+    font-size: 20px;
+    font-weight: bold;
+    color: orangered;
+    margin: 10px 0;
+}
+
+.conteudos {
+    list-style: none;
+    padding: 0;
+}
+
+.assinar {
+    display: inline-block;
+    background-color: orangered;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: orangered;
+}
+
+.aviso-planos {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.aviso-planos p:last-child {
+    font-weight: bold;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
