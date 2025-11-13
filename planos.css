@@ -101,10 +101,8 @@
         }
 
 hr {
-    border: 1px solid #FF4500;
-    width: 80%;
-    margin: 30px auto;
-        }
+    display: none;
+}
 
 
 .aviso-planos {
@@ -114,3 +112,4 @@ hr {
     padding: 0 20px;
     color: #333;
         }
+
