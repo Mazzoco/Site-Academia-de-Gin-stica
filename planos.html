@@ -13,12 +13,68 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="planos.css">
 
+    <style>
+        /* BLOQUINHO DO LETREIRO */
+        .promo-container {
+            background-color: black;
+            border: 3px solid #FF4500;
+            border-radius: 10px;
+            color: #FF4500;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            width: 80%;
+            max-width: 700px;
+            margin: 50px auto;
+            height: 160px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+        }
+
+        .promo-text {
+            position: absolute;
+            width: 100%;
+            animation: subirDescer 5s ease-in-out infinite;
+        }
+
+        @keyframes subirDescer {
+            0% { top: 100%; }
+            50% { top: 0%; }
+            100% { top: -100%; }
+        }
+
+        .promo-preco {
+            font-size: 1.5rem;
+            color: #FFD700;
+        }
+
+        .promo-detalhes {
+            font-size: 1rem;
+            color: white;
+        }
+
+        hr {
+            border: 1px solid #FF4500;
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        /* Centraliza texto informativo */
+        .aviso-planos {
+            text-align: justify;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+    </style>
 </head>
 
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -37,72 +93,77 @@
         </div>
     </nav>
 
-<!-- Cabeçalho -->
-       <header class="text-center py-5 bg-light">
+    <!-- Cabeçalho -->
+    <header class="text-center py-5 bg-light">
         <div class="container">
             <h1 class="mb-3"><font face="Poppins" color="#FF4500">Planos</font></h1>
             <p class="lead">Escolha um plano vantajoso para você e venha fazer parte da melhor academia de São Paulo</p>
         </div>
     </header>
 
+    <hr color="#FF4500">
+
+    <!-- BLOQUINHO PROMOCIONAL ANIMADO -->
+    <section class="promo-container">
+        <div class="promo-text">
+            <font face="Poppins" color="#FF4500">
+                <b>🔥 MEGA PROMOÇÃO DE NOVEMBRO 🔥</b><br>
+                <strike>De R$199,90</strike> <b class="promo-preco">por apenas R$99,90/mês!</b><br>
+                <span class="promo-detalhes">Assine hoje e ganhe avaliação física + camiseta exclusiva 🎁</span>
+            </font>
+        </div>
+    </section>
+
+    <!-- Seção dos Planos -->
     <section class="planos-da-academia">
+        <!-- Plano Essencial -->
+        <div class="card">
+            <h3>Plano Essencial</h3>
+            <p class="preço">R$129,90 / mês</p>
+            <ul class="conteúdos">
+                <li>Acesso a 1 unidade</li>
+                <li>Taxa de matrícula de R$50,00</li>
+                <li>Taxa de anuidade de R$80,00</li>
+                <li>Sem fidelidade</li>
+                <a href="contato.html" class="assinar">Assine conosco</a>
+            </ul>
+        </div>
 
-<!-- Plano Essencial -->
-    <div class="card">
-        <h3>Plano Essencial</h3>
-        <p class="preço">R$129,90 / mês</p>
-        <ul class="conteúdos">
-            <li>Acesso a 1 unidade</li>
-            <li>Taxa de matrícula de R$50,00</li>
-            <li>Taxa de anuidade de R$80,00</li>
-            <li>Sem fidelidade</li>
+        <!-- Plano Infinity -->
+        <div class="card">
+            <h3>Plano Infinity</h3>
+            <p class="preço">R$149,90 / mês</p>
+            <ul class="conteúdos">
+                <li>Treine em todas as unidades</li>
+                <li>Sem taxa de matrícula</li>
+                <li>Sem taxa de anuidade</li>
+                <li>Fidelidade de 12 meses</li>
+                <a href="contato.html" class="assinar">Assine conosco</a>
+            </ul>
+        </div>
 
-            <a href="contato.html" class="assinar">Assine conosco</a>
+        <!-- Plano Premium -->
+        <div class="card">
+            <h3>Plano Premium</h3>
+            <p class="preço">R$179,90 / mês</p>
+            <ul class="conteúdos">
+                <li>Treine em todas as unidades</li>
+                <li>Sem taxa de matrícula</li>
+                <li>Sem taxa de anuidade</li>
+                <li>Sem fidelidade</li>
+                <a href="contato.html" class="assinar">Assine conosco</a>
+            </ul>
+        </div>
+    </section>
 
-        </ul>
-    </div>
-
-<!-- Plano Infinity -->
-    <div class="card">
-        <h3>Plano Infinity</h3>
-        <p class="preço">R$149,90 / mês</p>
-        <ul class="conteúdos">
-            <li>Treine em todas as unidades</li>
-            <li>Sem taxa de matrícula</li>
-            <li>Sem taxa de anuidade</li>
-            <li>Fidelidade de 12 meses</li>
-
-            <a href="contato.html" class="assinar">Assine conosco</a>
-
-        </ul>
-    </div>
-
-<!-- Plano Premium -->
-    <div class="card">
-        <h3>Plano Premium</h3>
-        <p class="preço">R$179,90 / mês</p>
-        <ul class="conteúdos">
-            <li>Treine em todas as unidades</li>
-            <li>Sem taxa de matrícula</li>
-            <li>Sem taxa de anuidade</li>
-            <li>Sem fidelidade</li>
-
-            <a href="contato.html" class="assinar">Assine conosco</a>
-
-        </ul>
-    </div>
-
-<!-- Aviso sobre os planos -->
-</section>
+    <!-- Texto informativo (mantido conforme seu pedido) -->
     <section class="aviso-planos">
+        <p>O valor da mensalidade não inclui eventuais taxas de adesão ou serviços adicionais. Os preços podem variar conforme o plano escolhido e a unidade selecionada. Consulte a lista completa de unidades participantes, horários de atendimento e condições atualizadas diretamente conosco.</p>
+        <p>Alguns planos podem oferecer benefícios extras, como descontos em serviços parceiros. Esses benefícios variam de acordo com o plano contratado e não são cumulativos. Para utilizar vantagens extras, pode ser necessário realizar cadastro prévio.</p>
+        <p>Consulte sempre os termos do seu plano para verificar regras, prazos mínimos de permanência, disponibilidade de serviços e condições promocionais. Qualquer dúvida entre em contato.</p>
+    </section>
 
-      <p>O valor da mensalidade não inclui eventuais taxas de adesão ou serviços adicionais. Os preços podem variar conforme o plano escolhido e a unidade selecionada. Consulte a lista completa de unidades participantes, horários de atendimento e condições atualizadas diretamente conosco.</p>
-      <p>Alguns planos podem oferecer benefícios extras, como descontos em serviços parceiros. Esses benefícios variam de acordo com o plano contratado e não são cumulativos. Para utilizar vantagens extras, pode ser necessário realizar cadastro prévio.</p>
-      <p>Consulte sempre os termos do seu plano para verificar regras, prazos mínimos de permanência, disponibilidade de serviços e condições promocionais. Qualquer dúvida entre em contato.</p>
-    
-   </section>
-
-<!-- Rodapé -->
+    <!-- Rodapé -->
     <footer class="text-center bg-#1e3c72 text-light py-3">
         <p>&copy; 2025 Academia Infinity | Todos os direitos reservados.</p>
         <div>
@@ -112,7 +173,7 @@
         </div>
     </footer>
 
-<!-- Bootstrap  -->
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+</body>
 </html>
