@@ -1,73 +1,116 @@
-/* ======== GERAL ======== */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f5f7fa;
-    color: #333;
-    margin: 0; padding: 0;
-}
-
-/* ======== NAVBAR ======== */
-.navbar { background: linear-gradient(90deg, #1e3c72, #2a5298); }
-.navbar-brand { color: #FF4500 !important; font-weight: 700; font-size: 1.5rem; }
-.nav-link { font-weight: 500; transition: color 0.3s; }
-.nav-link:hover { color: #FF4500 !important; }
-
-/* ======== CABEÇALHO ======== */
-header { text-align: center; padding: 60px 0; background: #f8f9fa; }
-header h1 { color: #FF4500; font-weight: 700; margin-bottom: 15px; }
-header p.lead { font-size: 1.2rem; color: #333; }
-
-/* ======== BLOQUINHO PROMO ======== */
-.promo-container {
-    background: black; border: 3px solid #FF4500; border-radius: 10px;
-    color: #FF4500; font-weight: bold; width: 80%; max-width: 700px;
-    margin: 50px auto; height: 160px; overflow: hidden; text-align: center;
-    position: relative; box-shadow: 0 0 15px rgba(255,69,0,0.6);
-}
-.promo-text {
-    position: absolute; width: 100%;
-    animation: subirDescer 5s ease-in-out infinite;
-}
-.promo-preco { font-size: 1.5rem; color: #FFD700; }
-.promo-detalhes { font-size: 1rem; color: #fff; }
-@keyframes subirDescer { 0% {top:100%} 50% {top:0%} 100% {top:-100%} }
-
-/* ======== PLANOS ======== */
-.planos-da-academia {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 25px;
-    padding: 40px 20px;
-}
 .card {
-    background: #fff; border: 2px solid #FF4500; border-radius: 10px;
-    width: 300px; padding: 25px 20px; text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 16px;             
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.card h3 { color: #1e3c72; font-weight: 700; margin-bottom: 15px; }
-.card .preço { color: #FF4500; font-weight: 700; margin-bottom: 15px; }
-ul.conteúdos { list-style:none; padding:0; margin-bottom:15px; }
-ul.conteúdos li { margin: 8px 0; }
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.planos-da-academia {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.preço {
+    font-size: 20px;
+    font-weight: bold;
+    color: orangered;
+    margin: 10px 0;
+}
+
+.conteudos {
+    list-style: none;
+    padding: 0;
+}
+
 .assinar {
-    display:inline-block; background:#FF4500; color:#fff; padding:10px 20px;
-    border-radius:5px; text-decoration:none; transition:background 0.3s;
+    display: inline-block;
+    background-color: orangered;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: orangered;
 }
-.assinar:hover { background:#FF6B35; }
 
-/* ======== TEXTO INFORMATIVO ======== */
-.aviso-planos { max-width:900px; margin:40px auto; padding:0 20px; text-align:justify; line-height:1.6; }
-
-/* ======== SEPARADOR ======== */
-hr { border:1px solid #FF4500; width:80%; margin:30px auto; }
-
-/* ======== RODAPÉ ======== */
-footer { background:#1e3c72; color:white; text-align:center; padding:20px 0; }
-footer a { color:#FF4500; margin:0 10px; }
-footer a:hover { text-decoration:underline; }
-
-/* ======== RESPONSIVO ======== */
-@media(max-width:768px){
-    .planos-da-academia { flex-direction:column; align-items:center; }
-    .card { width:90%; }
-    .promo-container { height:140px; }
-    header h1 { font-size:2rem; }
-    header p.lead { font-size:1rem; }
+.aviso-planos {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
 }
+
+.aviso-planos p:last-child {
+    font-weight: bold;
+}
+
+.promo-container {
+    background-color: black;
+    border: 3px solid #FF4500;
+    border-radius: 10px;
+    color: #FF4500;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    width: 80%;
+    max-width: 700px;
+    margin: 50px auto;
+    height: 160px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+        }
+        
+.promo-text {
+    position: absolute;
+    width: 100%;
+    animation: subirDescer 5s ease-in-out infinite;
+        }
+
+@keyframes subirDescer {
+    0% { top: 100%; }
+    50% { top: 0%; }
+    100% { top: -100%; }
+        }
+
+.promo-preco {
+    font-size: 1.5rem;
+    color: #FFD700;
+        }
+
+.promo-detalhes {
+    font-size: 1rem;
+    color: white;
+        }
+
+hr {
+    border: 1px solid #FF4500;
+    width: 80%;
+    margin: 30px auto;
+        }
+
+
+.aviso-planos {
+    text-align: justify;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #333;
+        }
