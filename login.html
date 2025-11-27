@@ -13,6 +13,7 @@
         }
         .card {
             margin-top: 80px;
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -34,6 +35,7 @@
                     <button class="btn btn-primary w-100 mb-2">Entrar</button>
                 </form>
 
+                <!-- BOTÃO PARA IR AO CADASTRO OCULTO -->
                 <button class="btn btn-secondary w-100 mb-2" onclick="irCadastro()">
                     Criar Conta
                 </button>
@@ -47,7 +49,7 @@
 </div>
 
 <script>
-    // LOGIN SIMPLES (pode trocar pelos dados Java depois)
+    // LOGIN SIMPLES EM JAVASCRIPT
     const loginCorreto = {
         email: "admin@gmail.com",
         senha: "123"
@@ -60,12 +62,15 @@
         let senha = document.getElementById("senha").value;
 
         if (email === loginCorreto.email && senha === loginCorreto.senha) {
-            window.location.href = "cadastroUsuarios.html";
+            // login correto → vai para a página de cadastro
+            window.location.href = "cadastroUsuarios.html?acesso=permitido";
         } else {
+            // login errado → aparece mensagem
             document.getElementById("erro").classList.remove("d-none");
         }
     });
 
+    // ACESSO AO CADASTRO "ESCONDIDO"
     function irCadastro() {
         window.location.href = "cadastroUsuarios.html?acesso=permitido";
     }
