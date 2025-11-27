@@ -34,6 +34,7 @@
     if (!usuario) {
         alert("Nenhum usuário cadastrado!");
         window.location.href = "login.html";
+        return; // impede continuar e evitar erro
     }
 
     let lista = document.getElementById("listaDados");
