@@ -2,48 +2,83 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Dados do Usuário</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados da Conta - Academia Infinity</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        body { background: #f7f7f7; }
-        .card { margin-top: 50px; }
+        .foto-preview {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #6c757d;
+        }
     </style>
 </head>
-
 <body>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-5">
-            <div class="card p-4 shadow">
-                <h3 class="text-center mb-3">Usuário Cadastrado</h3>
+<!-- IMPORTAR NAVBAR -->
+<script src="navbar.js"></script>
 
-                <ul class="list-group" id="listaDados"></ul>
+<div class="container mt-5">
 
-                <a href="login.html" class="btn btn-primary w-100 mt-3">Voltar ao Login</a>
-            </div>
+    <!-- Botão de voltar -->
+    <button 
+    class="btn mb-4" 
+    style="background-color:#3293fa; color:white; border-color:#3293fa;" 
+    onclick="history.back()"
+>
+    ← Voltar
+</button>
+
+    <h2 class="text-center mb-4">Dados da Conta</h2>
+
+    <div class="card shadow p-4">
+
+        <div class="text-center mb-4">
+            <img id="previewFotoPerfil" src="imgsgym/person-circle.svg" class="foto-preview">
         </div>
+
+        <div class="mb-3">
+            <label class="form-label">Nome de usuário</label>
+            <input type="text" id="inputNomeUsuario" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" id="inputEmailUsuario" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Foto de Perfil</label>
+            <input type="file" id="inputFotoPerfil" accept="image/*" class="form-control">
+        </div>
+
+        <button class="btn btn-primary w-100 mt-3" onclick="salvarAlteracoesUsuario()">Salvar Alterações</button>
+
     </div>
 </div>
 
+
+<script src="usuario.js"></script>
 <script>
-    let usuario = JSON.parse(localStorage.getItem("usuario"));
+    // Carregar valores salvos ao abrir a página
+    window.onload = function() {
+        const nome = localStorage.getItem("nomeUsuario");
+        const email = localStorage.getItem("emailUsuario");
+        const foto = localStorage.getItem("fotoPerfil");
 
-    if (!usuario) {
-        alert("Nenhum usuário cadastrado!");
-        window.location.href = "login.html";
-        return; // impede continuar e evitar erro
-    }
-
-    let lista = document.getElementById("listaDados");
-    lista.innerHTML = `
-        <li class="list-group-item"><strong>Nome:</strong> ${usuario.nome}</li>
-        <li class="list-group-item"><strong>Email:</strong> ${usuario.email}</li>
-        <li class="list-group-item"><strong>Senha:</strong> ${usuario.senha}</li>
-    `;
+        if (nome) document.getElementById("inputNomeUsuario").value = nome;
+        if (email) document.getElementById("inputEmailUsuario").value = email;
+        if (foto) document.getElementById("previewFotoPerfil").src = foto;
+    };
 </script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
